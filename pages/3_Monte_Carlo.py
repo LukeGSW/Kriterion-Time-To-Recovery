@@ -110,7 +110,7 @@ with st.sidebar:
         st.markdown("""
 **ETF USA:** `SPY.US` · `QQQ.US`
 **Crypto:** `BTC-USD.CC` · `ETH-USD.CC`
-**Indici:** `GSPC.INDX` · `NDX.INDX`
+**Indici:** `GSPC.INDX` · `NDX.INDX` · `GDAXI.INDX`
         """)
 
 # ============================================================
