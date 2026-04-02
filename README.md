@@ -77,7 +77,7 @@ streamlit run app.py
 | Azioni Europa | codice exchange | `ENI.MI`, `BMW.XETRA`, `BP.LSE` |
 | Crypto | `.CC` | `BTC-USD.CC`, `ETH-USD.CC`, `SOL-USD.CC` |
 | Forex | `.FOREX` | `EURUSD.FOREX`, `GBPUSD.FOREX` |
-| Indici | `.INDX` | `GSPC.INDX`, `NDX.INDX`, `VIX.INDX`, `DAX.INDX` |
+| Indici | `.INDX` | `GSPC.INDX` (S&P 500), `NDX.INDX` (Nasdaq 100), `VIX.INDX`, `GDAXI.INDX` (DAX), `FCHI.INDX` (CAC 40), `N225.INDX` (Nikkei), `STOXX50E.INDX` (EuroStoxx 50) |
 | Futures/Commodities | `.COMM` | `GC.COMM` (Oro), `CL.COMM` (WTI), `ES.COMM` |
 
 ---
