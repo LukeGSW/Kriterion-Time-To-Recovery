@@ -124,8 +124,11 @@ with st.sidebar:
 `EURUSD.FOREX` · `GBPUSD.FOREX` · `USDJPY.FOREX`
 
 **Indici** → suffisso `.INDX`
-`GSPC.INDX` (S&P 500) · `DJI.INDX` (Dow)
-`NDX.INDX` (Nasdaq 100) · `VIX.INDX` · `DAX.INDX`
+`GSPC.INDX` (S&P 500) · `DJI.INDX` (Dow Jones)
+`NDX.INDX` (Nasdaq 100) · `VIX.INDX` (CBOE VIX)
+`GDAXI.INDX` (DAX) · `FCHI.INDX` (CAC 40)
+`FTSE.INDX` (FTSE 100) · `N225.INDX` (Nikkei)
+`STOXX50E.INDX` (EuroStoxx 50)
 
 **Futures/Commodities** → suffisso `.COMM`
 `GC.COMM` (Oro) · `CL.COMM` (WTI Oil)
