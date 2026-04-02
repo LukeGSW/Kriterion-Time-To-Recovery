@@ -270,7 +270,7 @@ Ogni area è annotata con la profondità percentuale del trough.
 """)
 
 fig_eq = build_equity_drawdown_chart(price_series, episodes_df, ticker)
-st.plotly_chart(fig_eq, use_container_width=True)
+st.plotly_chart(fig_eq, width='stretch')
 
 # Drawdown % continuo
 st.markdown("""
@@ -279,7 +279,7 @@ in ogni punto, la distanza dal massimo storico precedente. Utile per visualizzar
 complessiva dei periodi "sott'acqua", anche quando i singoli episodi si susseguono.
 """)
 fig_dd = build_drawdown_series_chart(price_series, ticker)
-st.plotly_chart(fig_dd, use_container_width=True)
+st.plotly_chart(fig_dd, width='stretch')
 
 with st.expander("ℹ️ Metodologia"):
     st.markdown("""
@@ -312,7 +312,7 @@ che si allarga progressivamente per TTR lunghi (dove i dati sono più rari).
 
 if kmf_overall is not None:
     fig_km = build_kaplan_meier_chart([kmf_overall], ticker)
-    st.plotly_chart(fig_km, use_container_width=True)
+    st.plotly_chart(fig_km, width='stretch')
 else:
     st.info("ℹ️ Dati insufficienti per il calcolo Kaplan-Meier (minimo 2 episodi).")
 
@@ -354,14 +354,14 @@ if not conditional_df.empty:
         })
         .set_properties(**{"text-align": "center"})
     )
-    st.dataframe(styled, use_container_width=True, hide_index=True)
+    st.dataframe(styled, width='stretch', hide_index=True)
 else:
     st.info("ℹ️ Dati insufficienti per l'analisi condizionale.")
 
 # Boxplot
 st.markdown("**Distribuzione del TTR per classe** (scala logaritmica):")
 fig_box = build_ttr_boxplot(episodes_df, ticker)
-st.plotly_chart(fig_box, use_container_width=True)
+st.plotly_chart(fig_box, width='stretch')
 
 st.divider()
 
@@ -424,7 +424,7 @@ if kmf_regimes:
     # Aggiungi la curva Overall per confronto
     all_kmf = [kmf_overall] + kmf_regimes if kmf_overall else kmf_regimes
     fig_regime = build_kaplan_meier_chart(all_kmf, ticker)
-    st.plotly_chart(fig_regime, use_container_width=True)
+    st.plotly_chart(fig_regime, width='stretch')
 else:
     st.info(
         "ℹ️ Dati insufficienti per l'analisi di regime. "
@@ -487,7 +487,7 @@ display_eps = display_eps.rename(columns={
 st.dataframe(
     display_eps[["Data Picco", "Data Minimo", "Data Recovery",
                  "Profondità (%)", "TTR (giorni)", "Censurato", "Classe"]],
-    use_container_width=True,
+    width="stretch",
     hide_index=True,
 )
 st.caption(f"Episodi visualizzati: **{len(filtered_eps)}** su {n_eps} totali.")
