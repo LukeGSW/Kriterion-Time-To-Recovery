@@ -263,7 +263,7 @@ Leggi: *"c'è il X% di probabilità che il drawdown da {current_depth_slider}% s
 """)
 
 fig_mc = build_montecarlo_chart(mc_results)
-st.plotly_chart(fig_mc, use_container_width=True)
+st.plotly_chart(fig_mc, width='stretch')
 
 st.divider()
 
@@ -308,7 +308,7 @@ styled_prob = (
     })
     .set_properties(**{"text-align": "center"})
 )
-st.dataframe(styled_prob, use_container_width=True, hide_index=True)
+st.dataframe(styled_prob, width='stretch', hide_index=True)
 
 st.divider()
 
@@ -353,7 +353,7 @@ else:
     st.dataframe(
         disp[["Data Picco", "Data Minimo", "Data Recovery",
               "Profondità", "TTR (gg)", "Censurato", "Classe"]],
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
     st.caption(f"**{len(comparable_eps)}** episodi comparabili su {n_tot} totali.")
