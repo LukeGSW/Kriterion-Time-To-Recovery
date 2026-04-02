@@ -87,9 +87,11 @@ with st.sidebar:
         st.markdown("""
 **ETF USA:** `SPY.US` · `QQQ.US` · `GLD.US`
 **Crypto:** `BTC-USD.CC` · `ETH-USD.CC`
-**Indici:** `GSPC.INDX` · `DAX.INDX`
-**Forex:** `EURUSD.FOREX`
-**Futures:** `GC.COMM` · `CL.COMM`
+**Indici:** `GSPC.INDX` (S&P 500) · `GDAXI.INDX` (DAX)
+`NDX.INDX` (Nasdaq 100) · `N225.INDX` (Nikkei)
+`FCHI.INDX` (CAC 40) · `STOXX50E.INDX` (EuroStoxx 50)
+**Forex:** `EURUSD.FOREX` · `GBPUSD.FOREX`
+**Futures:** `GC.COMM` (Oro) · `CL.COMM` (WTI)
         """)
 
     st.divider()
