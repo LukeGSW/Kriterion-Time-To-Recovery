@@ -220,7 +220,7 @@ if heatmap_rows:
     pivot   = pivot.reindex(columns=[c for c in cat_order if c in pivot.columns])
 
     fig_hm = build_multi_asset_heatmap(pivot)
-    st.plotly_chart(fig_hm, use_container_width=True)
+    st.plotly_chart(fig_hm, width='stretch')
 else:
     st.info("ℹ️ Dati insufficienti per la heatmap.")
 
@@ -275,7 +275,7 @@ styled_metrics = (
     })
     .set_properties(**{"text-align": "center"})
 )
-st.dataframe(styled_metrics, use_container_width=True, hide_index=True)
+st.dataframe(styled_metrics, width='stretch', hide_index=True)
 
 st.divider()
 
@@ -293,7 +293,7 @@ with col_m1:
         metric="ttr_mediano_gg",
         y_label="TTR Mediano (giorni)",
     )
-    st.plotly_chart(fig_bar_ttr, use_container_width=True)
+    st.plotly_chart(fig_bar_ttr, width='stretch')
 
 with col_m2:
     fig_bar_ulcer = build_comparative_bar(
@@ -301,7 +301,7 @@ with col_m2:
         metric="ulcer_index",
         y_label="Ulcer Index (%)",
     )
-    st.plotly_chart(fig_bar_ulcer, use_container_width=True)
+    st.plotly_chart(fig_bar_ulcer, width='stretch')
 
 col_m3, col_m4 = st.columns(2)
 
@@ -311,7 +311,7 @@ with col_m3:
         metric="calmar_ratio",
         y_label="Calmar Ratio",
     )
-    st.plotly_chart(fig_bar_calmar, use_container_width=True)
+    st.plotly_chart(fig_bar_calmar, width='stretch')
 
 with col_m4:
     fig_bar_dd = build_comparative_bar(
@@ -319,7 +319,7 @@ with col_m4:
         metric="profondita_max_pct",
         y_label="Max Drawdown (%)",
     )
-    st.plotly_chart(fig_bar_dd, use_container_width=True)
+    st.plotly_chart(fig_bar_dd, width='stretch')
 
 st.divider()
 
@@ -342,7 +342,7 @@ di recupero strutturale.
 kmf_list_all = [data["kmf"] for data in results.values() if data["kmf"] is not None]
 if kmf_list_all:
     fig_km_all = build_kaplan_meier_chart(kmf_list_all, show_ci=False)
-    st.plotly_chart(fig_km_all, use_container_width=True)
+    st.plotly_chart(fig_km_all, width='stretch')
 else:
     st.info("ℹ️ Dati insufficienti per le curve Kaplan-Meier.")
 
