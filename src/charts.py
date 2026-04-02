@@ -377,8 +377,7 @@ def build_multi_asset_heatmap(heatmap_pivot: pd.DataFrame) -> go.Figure:
             [1.0,  "#F44336"],   # rosso — recovery lento
         ],
         colorbar=dict(
-            title="TTR Mediano (gg)",
-            titlefont=dict(color=COLORS["text"]),
+            title=dict(text="TTR Mediano (gg)", font=dict(color=COLORS["text"])),
             tickfont=dict(color=COLORS["text"]),
         ),
         hoverongaps=False,
